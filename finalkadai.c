@@ -7,19 +7,19 @@
 int main(void) {
 	ADDRESS address[MAX];
 	int count = 0;
-	int flag = 0; /* 0: ソ ー ト 、 追 加 、 削 除 未 実 施 , 1: 実 施 済 */
+	int flag = 0; /* 0: Have not done Sort, Add, or Delete, 1: Done */
 	int command = 0;
 	char string_command[10] = "y";
 	while (1) {
 		printf("\n ------------------------------------\n");
 		printf("MENU \n");
-		printf("1: 住 所 録 読 込\n");
-		printf("2: 住 所 録 上 書\n");
-		printf("3: ソ ー ト\n");
-		printf("4: 追 加\n");
-		printf("5: 削 除\n");
-		printf("6: 結 果 書 込 （ r e s u l t フ ァ イ ル へ 書 込 ） \n");
-		printf("0: 終 了\n");
+		printf("1:Read Address\n");
+		printf("2: Update Address\n");
+		printf("3: Sort\n");
+		printf("4: Add\n");
+		printf("5: Delete\n");
+		printf("6: Write the result to the result file\n");
+		printf("0: Done\n");
 		printf("------------------------------------\n");
 		printf(">");
 		scanf("%d", &command);
@@ -29,10 +29,10 @@ int main(void) {
 		}
 		else if (command == 2) {
 				if (flag == 0) {
-					printf(" ソ ー ト 、 追 加 、 削 除 未 実 施 で す 。 上 書 は 行 い ま せ ん 。\n");
+					printf("Have not done Sort, Add, or Delete. No updates done.\n");
 				}
 				else { /* flag == 1 */
-					printf(" 住 所 録 を 上 書 き し ま す 。 宜 し い で す か ？ (y / n )");
+					printf("Would you like to update the address? (y / n )");
 					scanf("%s", string_command);
 					if (strcmp(string_command, "y") == 0) {
 						printf("DEBUG: Before writeAddress\n");
@@ -48,7 +48,7 @@ int main(void) {
 		}
 		else if (command == 4) {
 			if (count >= MAX) {
-				printf(" 住 所 録 の 上 限 で す 。 こ れ 以 上 追 加 で き ま せ ん 。\n");
+				printf("Limit reached for the number of address. No more address can be added.\n");
 			}
 			else {
 				count = add(count, address);
@@ -61,7 +61,7 @@ int main(void) {
 		}
 		else if (command == 6) {
 			if (flag == 0) {
-				printf(" ソ ー ト 、 追 加 、 削 除 未 実 施 で す 。 書 込 は 行 い ま せ ん 。\n");
+				printf("Have not done Sort, Add, or Delete. Updating the file will not be done.\n");
 			}
 			else { /* flag == 1 */
 				writeResult(count, address);
@@ -69,8 +69,8 @@ int main(void) {
 			}
 		}
 		else {
-			break; /* 無 限 ル ー プ か ら 脱 出 */
+			break; /* escape the loop */
 		}
 	}
 	return 0;
-}
+}
