@@ -7,12 +7,12 @@ void sort(int count, ADDRESS address[]) {
 	int command;
 	ADDRESS temporary;
 	int i, j;
-	printf(" ƒ\ [ ƒg ‚· ‚é ƒL [ ‚ð “ü —Í F\n");
-	printf("1: –¼ ‘O\n");
-	printf("2: –¼ ‘O ‚Ì ƒt ƒŠ ƒJ ƒi\n");
-	printf("3: —X •Ö ”Ô †\n");
-	printf("4: Z Š\n");
-	printf("5: Z Š ‚Ì ƒt ƒŠ ƒJ ƒi\n");
+	printf(" Enter the key for sort ï¼š\n");
+	printf("1: Name\n");
+	printf("2: Furigana of the name\n");
+	printf("3: Post address\n");
+	printf("4: Address\n");
+	printf("5: Furigana of the address\n");
 	printf(">");
 	scanf("%d", &command);
 	if (command == 1) {
@@ -76,4 +76,4 @@ void sort(int count, ADDRESS address[]) {
 		renumbering(count, address);
 	}
 	return;
-}
+}
