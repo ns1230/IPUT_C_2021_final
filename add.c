@@ -1,4 +1,9 @@
-﻿#define _CRT_SECURE_NO_WARNINGS
+/*
+ * File: add.c
+ * Description: Contains the implementation of the add function, which adds a new address entry to the address book.
+ */
+
+#define _CRT_SECURE_NO_WARNINGS
 #include "address.h"
 
 
