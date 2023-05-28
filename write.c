@@ -1,3 +1,8 @@
+/*
+ * File: write.c
+ * Description: Contains the implementation of the write function, which writes the address entries to a specified file.
+ */
+
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include "address.h"
