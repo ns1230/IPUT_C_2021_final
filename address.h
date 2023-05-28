@@ -1,3 +1,9 @@
+/*
+ * File: address.h
+ * Description: Contains the structure definition for an address and function declarations used in the address book program.
+ */
+
+
 #include<stdio.h>
 typedef struct address {
 	int number;
