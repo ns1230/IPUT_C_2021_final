@@ -1,3 +1,8 @@
+/*
+ * File: delete.c
+ * Description: Contains the implementation of the delete function, which removes an address entry from the address book.
+ */
+
 #define _CRT_SECURE_NO_WARNINGS
 #include "address.h"
 #include <stdio.h>
