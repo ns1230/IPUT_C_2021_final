@@ -1,3 +1,9 @@
+/*
+ * File: readAddress.c
+ * Description: Contains the implementation of the readAddress function, which reads address entries from a file and populates the address book.
+ */
+
+
 #define _CRT_SECURE_NO_WARNINGS
 #include "address.h"
 #include <stdio.h>
