@@ -1,3 +1,23 @@
+/*
+ * File: main.c
+ * Description: This file contains the main function that drives the address book program. It provides a menu-driven interface for managing address entries.
+ *
+ * The program uses the "address" structure defined in the "address.h" header file to store address information. It allows the user to perform various operations such as reading addresses from a file, updating addresses, sorting addresses, adding new addresses, deleting addresses, and writing the results to a file.
+ *
+ * The main function presents a menu to the user and takes input to execute the corresponding operation. It keeps track of the current number of addresses stored in the "address" array and a flag to indicate whether any updates have been made since the last write operation.
+ *
+ * The menu options include:
+ * 1. Read Address: Reads address entries from a file and populates the "address" array.
+ * 2. Update Address: Updates the address entries if any changes have been made since the last write operation.
+ * 3. Sort: Sorts the address entries in ascending order based on a chosen sorting criterion.
+ * 4. Add: Adds a new address entry to the "address" array if the limit has not been reached.
+ * 5. Delete: Deletes an address entry from the "address" array based on the specified address number.
+ * 6. Write the result to the result file: Writes the address entries to a file if any updates have been made since the last write operation.
+ * 0. Done: Exits the program.
+ *
+ * The main function runs in an infinite loop until the user chooses to exit. It prompts the user for menu selection, performs the corresponding operation, and updates the flag and count variables accordingly.
+ */
+
 #define _CRT_SECURE_NO_WARNINGS
 #define MAX 200
 #include <stdio.h>
