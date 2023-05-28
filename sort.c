@@ -1,3 +1,8 @@
+/*
+ * File: sort.c
+ * Description: Contains the implementation of the sort function, which sorts the address entries in the address book based on a chosen criterion.
+ */
+
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <string.h>
